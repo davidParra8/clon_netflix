@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: black;
+    color: white;
+}
+
+#logo{
+    cursor: pointer;
+}
+
+header{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.507);
+    /*background-color:  black;*/
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+header li a:hover{
+    color: rgb(146, 144, 144);
+}
+
+header li span:hover{
+    cursor: pointer;
+}
+
+#cuenta{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#txtBusqueda{
+    background-color: black;
+    padding: 1rem;
+    height: 4rem;
+    width: 20rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    border: solid 1px white;
+    display: none;
+}
+
+/*
+#busqueda{
+    margin-top: 2.5rem;  
+    margin-right: 1rem;
+}
+
+#busqueda:active{
+    cursor: default;    
+}
+
+#busqueda:hover{
+    cursor: pointer;    
+}*/
+
+header #menuPrincipal img{
+    width: 13rem;
+    margin-right: 2rem;
+}
+
+#menuPrincipal{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu{
+    display: inline-block;
+    flex-direction: row;
+    list-style: none;
+
+    padding-top: 3rem; /* = 30px*/
+    font-size: 1.5rem;
+    color: white;
+    font: bold;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-right: 2rem;
+}
+
+a{
+    text-decoration: none; 
+    color: inherit;
+}
+
+#bannerInicial{
+    background-image: url('img/peakyBlinders.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 100%;
+    height: 90vh;
+}
+
+#bannerInicial:hover{
+    background-image: url('img/pb.gif');
+    transition:all .8s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 100%;
+    height: 90vh;
+}
+
+#bannerInicial div{  
+    width: 50vw;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+#bannerInicial p{  
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+
+#bannerInicial button{
+    border-radius: 0.5rem;
+    border: solid 0 black;
+    width: 15rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+#play{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play:hover{
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+#masInfo{
+    color: white;
+    background-color: rgba(51, 50, 50, 0.76);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#masInfo:hover{
+    background-color: rgba(70, 70, 71, 0.568);
+}
+
+#ContinuarViendo,
+#tendencias,
+#volverVer{
+    width: 100%;
+    height: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    /*overflow: hidden; oculta lo que sale de del div*/
+    overflow-x: scroll;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: .1rem; /*Espacio entre columnas*/
+}
+
+/*
+#scrollIzq{
+    position: absolute;
+}
+
+#scrollIzq:active{
+    position: relative;
+    scroll-snap-align: start;
+}
+.contenedor::-webkit-scrollbar {
+    /*-webkit-appearance: none;
+}*/
+
+.contenedor div{
+    width: 22rem !important;
+    height: 12rem;
+    margin-top: 0;
+    margin: 0.5rem;
+}
+
+.contenedor:hover{
+    cursor: pointer;
+}
+
+#Outer_Banks, #byb, #cdp, #suits, #tua,
+#winx, #twd, #sabrina, #avatar, #h2o
+{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    width: 30rem;
+}
+
+#Outer_Banks{
+    background-image: url('img/Outer_Banks.jpg');
+}
+
+#Outer_Banks:hover{
+    background-image: url('img/Outer_Banks.gif');
+}
+
+#byb{
+    background-image: url('img/byb.jpg');
+}
+
+#byb:hover{
+    background-image: url('img/byb.gif');
+}
+
+#cdp{
+    background-image: url('img/cdp.jpg');
+}
+
+#cdp:hover{
+    background-image: url('img/cdp.gif');
+}
+
+#suits{
+    background-image: url('img/suits.jpg');
+}
+
+#suits:hover{
+    background-image: url('img/suits.gif');
+}
+
+#tua{
+    background-image: url('img/tua.jpg');
+}
+
+#tua:hover{
+    background-image: url('img/tua.gif');
+}
+
+#winx{
+    background-image: url('img/winx.jpg');
+}
+
+#winx:hover{
+    background-image: url('img/winx.gif');
+}
+
+#twd{
+    background-image: url('img/twd.jpg');
+}
+
+#twd:hover{
+    background-image: url('img/twd.gif');
+}
+
+#sabrina{
+    background-image: url('img/sabrina.jpg');
+}
+
+#sabrina:hover{
+    background-image: url('img/sabrina.gif');
+}
+
+#avatar{
+    background-image: url('img/avatar.jpg');
+}
+
+#avatar:hover{
+    background-image: url('img/avatar.gif');
+}
+
+#h2o{
+    background-image: url('img/h2o.jpg');
+}
+
+#h2o:hover{
+    background-image: url('img/h2o.gif');
+}
+
+footer{
+    display: block;
+    
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    color: gray;
+    
+    font-size: 1.5rem;
+}
+
+footer section{
+    display: flex;
+    flex-wrap: wrap;    
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem 12rem;
+}
+
+.redesSociales{
+    height: 3rem;
+    width: 3.3rem;
+}
+.footer-link{
+    list-style: none; 
+    margin: 1.5rem 0;
+}
+
+.footer-link a{
+    text-decoration: none;
+}
+
+.footer-link a:hover{
+    border-bottom: 1px solid gray;
+}
+
+#codigoServicio{
+    background-color: transparent;
+    color: gray;
+    border: 1px solid gray;
+    padding: .7rem;
+    margin: 2rem 0;
+}
+
+#codigoServicio:hover{
+    cursor: pointer;
+    color: white;
+}
